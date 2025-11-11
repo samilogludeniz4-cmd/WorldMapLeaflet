@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Dünya Haritası</title>
+    <link rel="stylesheet" href="/Lib/Leaflet/dist/leaflet.css"/>
+    <style>
+        html,body{height:100%;margin:0} #map{height:100%}
+        #searchPanel{
+            position:absolute;top:15px;left:15px;z-index:99999;
+            width:360px;background:#fff;border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,.18);border:1px solid #e6e6e6;
+            padding:8px 10px;
+        }
+        #q{width:100%;border:none;outline:none;font-size:15px}
+        #go{margin-top:8px;width:100%;border:1px solid #ddd;background:#fff;border-radius:8px;padding:6px 10px;cursor:pointer}
+        #suggestions{
+            position:absolute;top:72px;left:15px;z-index:99998;
+            width:360px;background:#fff;border:1px solid #e6e6e6;border-radius:10px;
+            box-shadow:0 8px 20px rgba(0,0,0,.15);max-height:320px;overflow:auto;display:none;
+        }
+        .sugg-item{padding:10px 12px;cursor:pointer;display:flex;gap:8px}
+        .sugg-item:hover,.sugg-item.active{background:#eef5ff}
+        .sugg-pin{font-size:18px} .sugg-title{font-weight:600}
+        .sugg-sub{font-size:12.5px;color:#666;margin-top:2px}
+    </style>
+</head>
+<body>
+<div id="searchPanel">
+    <input id="q" placeholder="İl, ilçe, mahalle, sokak ara…" autocomplete="off"/>
+    <button id="go">Ara</button>
+</div>
+<div id="suggestions"></div>
+<div id="map"></div>
+
+<script src="/Lib/Leaflet/dist/leaflet.js"></script>
+<script>
+    // --- Harita ---
+    const map = L.map('map',{worldCopyJump:true}).setView([39,35],6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {maxZoom:18,attribution:'&copy; OpenStreetMap'}).addTo(map);
+    map.zoomControl.setPosition('topright');
+
+    const markers=L.layerGroup().addTo(map);
+    function setMarker(lat,lon,name){
+        markers.clearLayers();
+        const p=[lat,lon];
+        L.marker(p).addTo(markers).bindPopup(name).openPopup();
+        map.panTo(p,{animate:true,duration:.5}); // sadece pan; zoom sabit
+    }
+
+    // --- Yardımcılar (Türkçe normalizasyon + skor) ---
+    const trMap = {'Ç':'c','Ğ':'g','İ':'i','I':'i','Ö':'o','Ş':'s','Ü':'u','ç':'c','ğ':'g','ı':'i','ö':'o','ş':'s','ü':'u'};
+    const norm = s => (s||'').replace(/[ÇĞİIÖŞÜçğıöşü]/g,ch=>trMap[ch]).toLowerCase();
+    const cityLikeTypes = new Set(['city','town','village','municipality','state','province','district','county','suburb','quarter','neighbourhood']);
+
+    function scoreRow(r, termN){
+        const a=r.address||{}, fields=[a.city,a.town,a.village,a.state,a.province,a.county,a.district,a.suburb,a.quarter,a.neighbourhood,r.display_name];
+        let s=0, idx=0;
+        for(const f of fields){
+            if(!f) { idx++; continue; }
+            const nf=norm(f);
+            if(nf===termN) s+=120-idx;            // tam eşleşme çok yüksek
+            else if(nf.startsWith(termN)) s+=60-idx;
+            else if(nf.includes(termN)) s+=20-idx;
+            idx++;
+        }
+        if(cityLikeTypes.has(r.type)) s+=15;    // city/town vs. bonus
+        return s+(r.importance||0);
+    }
+
+    function titleOf(r){
+        const a=r.address||{};
+        return a.city||a.town||a.village||a.district||a.suburb||a.quarter||a.neighbourhood||a.state||r.display_name.split(',')[0];
+    }
+    function subOf(r){
+        const a=r.address||{};
+        const parts=[a.county,a.city,a.state].filter(Boolean);
+        return parts.length?parts.join(', '):r.display_name;
+    }
+
+    // --- Öneri mantığı ---
+    const q = document.getElementById('q');
+    const goBtn = document.getElementById('go');
+    const box = document.getElementById('suggestions');
+
+    let debounce, controller, results=[], active=-1;
+
+    async function fetchSuggestions(term){
+        if(controller) controller.abort();
+        controller = new AbortController();
+        const res = await fetch('/api/geocode?q='+encodeURIComponent(term), {signal:controller.signal});
+        const data = await res.json();
+        const termN = norm(term);
+
+        // 1) sadece Türkiye içi city-like tipleri al
+        let arr = (Array.isArray(data)?data:[]).filter(r => cityLikeTypes.has(r.type));
+
+        // 2) skorla sırala
+        arr.forEach(r => r.__score = scoreRow(r, termN));
+        arr.sort((a,b)=>b.__score - a.__score);
+
+        // 3) aynı başlığa sahip olanları tekille
+        const used = new Set();
+        const dedup = [];
+        for(const r of arr){
+            const t = titleOf(r);
+            const key = norm(t);
+            if(used.has(key)) continue;
+            used.add(key);
+            dedup.push(r);
+            if(dedup.length>=8) break;
+        }
+        results = dedup;
+        active=-1;
+        render();
+    }
+
+    function render(){
+        if(!results.length){ box.style.display='none'; box.innerHTML=''; return; }
+        box.innerHTML = results.map((r,i)=>`
+        <div class="sugg-item ${i===active?'active':''}" data-i="${i}">
+          <div class="sugg-pin">📍</div>
+          <div>
+            <div class="sugg-title">${titleOf(r)}</div>
+            <div class="sugg-sub">${subOf(r)}</div>
+          </div>
+        </div>`).join('');
+        box.style.display='block';
+    }
+
+    q.addEventListener('input', ()=>{
+        const term=q.value.trim();
+        clearTimeout(debounce);
+        if(!term){ results=[]; render(); return; }
+        debounce=setTimeout(()=>fetchSuggestions(term), 200);
+    });
+
+    box.addEventListener('click', e=>{
+        const item=e.target.closest('.sugg-item'); if(!item) return;
+        choose(+item.dataset.i);
+    });
+
+    q.addEventListener('keydown', e=>{
+        if(!results.length) return;
+        if(e.key==='ArrowDown'){ e.preventDefault(); active=(active+1)%results.length; render(); }
+        else if(e.key==='ArrowUp'){ e.preventDefault(); active=(active-1+results.length)%results.length; render(); }
+        else if(e.key==='Enter'){ e.preventDefault(); choose(active>=0?active:0); }
+        else if(e.key==='Escape'){ results=[]; render(); }
+    });
+
+    document.addEventListener('click', e=>{
+        if(!document.getElementById('searchPanel').contains(e.target) && !box.contains(e.target))
+            box.style.display='none';
+    });
+
+    async function go(){
+        const term=q.value.trim();
+        if(!term) return;
+        if(!results.length) await fetchSuggestions(term);
+        if(results.length) choose(0);
+    }
+    goBtn.addEventListener('click', go);
+
+    function choose(i){
+        const r=results[i]; if(!r) return;
+        q.value = titleOf(r);                 // kutuda kısa ad kalsın (örn. İstanbul)
+        box.style.display='none';
+        setMarker(parseFloat(r.lat), parseFloat(r.lon), r.display_name);
+    }
+</script>
+</body>
+</html>

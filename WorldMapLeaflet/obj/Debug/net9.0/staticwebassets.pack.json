@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/.DS_Store",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/.DS_Store"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/images/layers-2x.png",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/images/layers-2x.png"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/images/layers.png",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/images/layers.png"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/images/marker-icon-2x.png",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/images/marker-icon-2x.png"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/images/marker-icon.png",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/images/marker-icon.png"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/images/marker-shadow.png",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/images/marker-shadow.png"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/leaflet-src.esm.js",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/leaflet-src.esm.js"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/leaflet-src.esm.js.map",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/leaflet-src.esm.js.map"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/leaflet-src.js",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/leaflet-src.js"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/leaflet-src.js.map",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/leaflet-src.js.map"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/leaflet.css",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/leaflet.css"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/leaflet.js",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/leaflet.js"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/leaflet.js.map",
+      "PackagePath": "staticwebassets/Lib/Leaflet/dist/leaflet.js.map"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/data/world.geojson.json",
+      "PackagePath": "staticwebassets/data/world.geojson.json"
+    },
+    {
+      "Id": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.WorldMapLeaflet.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.WorldMapLeaflet.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.WorldMapLeaflet.props",
+      "PackagePath": "build\\WorldMapLeaflet.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.WorldMapLeaflet.props",
+      "PackagePath": "buildMultiTargeting\\WorldMapLeaflet.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.WorldMapLeaflet.props",
+      "PackagePath": "buildTransitive\\WorldMapLeaflet.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

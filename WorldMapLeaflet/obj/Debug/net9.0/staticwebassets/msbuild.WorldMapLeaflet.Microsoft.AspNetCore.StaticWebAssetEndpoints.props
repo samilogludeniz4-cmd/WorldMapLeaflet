@@ -1,0 +1,184 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/data/world.geojson.json">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\data\world.geojson.json'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-wMVryXEtQ0OZgXIJmBGsuoyeMDdYg83SfYJSyoBTQKI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"21586743"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022wMVryXEtQ0OZgXIJmBGsuoyeMDdYg83SfYJSyoBTQKI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 05 Sep 2025 08:03:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/data/world.geojson.kz8r0labqh.json">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\data\world.geojson.json'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kz8r0labqh"},{"Name":"integrity","Value":"sha256-wMVryXEtQ0OZgXIJmBGsuoyeMDdYg83SfYJSyoBTQKI="},{"Name":"label","Value":"_content/WorldMapLeaflet/data/world.geojson.json"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"21586743"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022wMVryXEtQ0OZgXIJmBGsuoyeMDdYg83SfYJSyoBTQKI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 05 Sep 2025 08:03:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/index.4paxoh9b2j.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4paxoh9b2j"},{"Name":"integrity","Value":"sha256-mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg="},{"Name":"label","Value":"_content/WorldMapLeaflet/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10839"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 30 Oct 2025 15:44:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/index.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"10839"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 30 Oct 2025 15:44:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/.46x06tl61j.DS_Store">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\.DS_Store'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"46x06tl61j"},{"Name":"integrity","Value":"sha256-FC4ywDFW\u002Bq3EAUwyifBymFpgAju/Vphw1ayCjzAgFSA="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/.DS_Store"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6148"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022FC4ywDFW\u002Bq3EAUwyifBymFpgAju/Vphw1ayCjzAgFSA=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/.DS_Store">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\.DS_Store'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-FC4ywDFW\u002Bq3EAUwyifBymFpgAju/Vphw1ayCjzAgFSA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6148"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022FC4ywDFW\u002Bq3EAUwyifBymFpgAju/Vphw1ayCjzAgFSA=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/images/layers-2x.ef5uc09gvw.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\images\layers-2x.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ef5uc09gvw"},{"Name":"integrity","Value":"sha256-Bm2sqFDY/77wB68AsG6sABVyje4nnFHzy2xxbffELt8="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/images/layers-2x.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1259"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Bm2sqFDY/77wB68AsG6sABVyje4nnFHzy2xxbffELt8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/images/layers-2x.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\images\layers-2x.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Bm2sqFDY/77wB68AsG6sABVyje4nnFHzy2xxbffELt8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1259"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Bm2sqFDY/77wB68AsG6sABVyje4nnFHzy2xxbffELt8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/images/layers.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\images\layers.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Hbvp0CjikvNvy6j4s6KNXokydU/CIVuaxp5M3s9RB8Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"696"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Hbvp0CjikvNvy6j4s6KNXokydU/CIVuaxp5M3s9RB8Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/images/layers.ptvguihtoq.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\images\layers.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ptvguihtoq"},{"Name":"integrity","Value":"sha256-Hbvp0CjikvNvy6j4s6KNXokydU/CIVuaxp5M3s9RB8Y="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/images/layers.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"696"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Hbvp0CjikvNvy6j4s6KNXokydU/CIVuaxp5M3s9RB8Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/images/marker-icon-2x.0gkuypkyzq.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\images\marker-icon-2x.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0gkuypkyzq"},{"Name":"integrity","Value":"sha256-ABecTB7oMNOhCEEq4NKU9Vd2z\u002BsIXGASmjmqb8SuJSg="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/images/marker-icon-2x.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2464"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ABecTB7oMNOhCEEq4NKU9Vd2z\u002BsIXGASmjmqb8SuJSg=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/images/marker-icon-2x.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\images\marker-icon-2x.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ABecTB7oMNOhCEEq4NKU9Vd2z\u002BsIXGASmjmqb8SuJSg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2464"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ABecTB7oMNOhCEEq4NKU9Vd2z\u002BsIXGASmjmqb8SuJSg=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/images/marker-icon.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\images\marker-icon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-V0w6XMqF9BFAhbaEFZbWLwDXyJLHsD8oy/owHesdxDc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1466"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022V0w6XMqF9BFAhbaEFZbWLwDXyJLHsD8oy/owHesdxDc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/images/marker-icon.vq9wvlav5t.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\images\marker-icon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vq9wvlav5t"},{"Name":"integrity","Value":"sha256-V0w6XMqF9BFAhbaEFZbWLwDXyJLHsD8oy/owHesdxDc="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/images/marker-icon.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1466"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022V0w6XMqF9BFAhbaEFZbWLwDXyJLHsD8oy/owHesdxDc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/images/marker-shadow.enp07i83pd.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\images\marker-shadow.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"enp07i83pd"},{"Name":"integrity","Value":"sha256-Jk9cZAM58ELdcpBiz8BMF/jqDymIK1OOOEjtjxDttNo="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/images/marker-shadow.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"618"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Jk9cZAM58ELdcpBiz8BMF/jqDymIK1OOOEjtjxDttNo=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/images/marker-shadow.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\images\marker-shadow.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jk9cZAM58ELdcpBiz8BMF/jqDymIK1OOOEjtjxDttNo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"618"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Jk9cZAM58ELdcpBiz8BMF/jqDymIK1OOOEjtjxDttNo=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.9qvfxtz8cu.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet-src.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9qvfxtz8cu"},{"Name":"integrity","Value":"sha256-YdNCj7T6LHY9eEGeJxzeBTeujq54SQTu5Eqow2akZsk="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"450240"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022YdNCj7T6LHY9eEGeJxzeBTeujq54SQTu5Eqow2akZsk=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.esm.in6jj3e4kb.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet-src.esm.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"in6jj3e4kb"},{"Name":"integrity","Value":"sha256-kpjvV6pKc3HMzUWIW8wzrwFJ8GULhdOFq4/XuroRLvs="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.esm.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"424600"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022kpjvV6pKc3HMzUWIW8wzrwFJ8GULhdOFq4/XuroRLvs=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.esm.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet-src.esm.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-kpjvV6pKc3HMzUWIW8wzrwFJ8GULhdOFq4/XuroRLvs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"424600"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022kpjvV6pKc3HMzUWIW8wzrwFJ8GULhdOFq4/XuroRLvs=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.esm.js.jlhumrsmn6.map">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet-src.esm.js.map'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jlhumrsmn6"},{"Name":"integrity","Value":"sha256-lxY34ye1PfsolFQ8pTsEtlgBJ4tW7panCBRsm35HNbs="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.esm.js.map"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"866200"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022lxY34ye1PfsolFQ8pTsEtlgBJ4tW7panCBRsm35HNbs=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.esm.js.map">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet-src.esm.js.map'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-lxY34ye1PfsolFQ8pTsEtlgBJ4tW7panCBRsm35HNbs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"866200"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022lxY34ye1PfsolFQ8pTsEtlgBJ4tW7panCBRsm35HNbs=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet-src.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YdNCj7T6LHY9eEGeJxzeBTeujq54SQTu5Eqow2akZsk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"450240"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022YdNCj7T6LHY9eEGeJxzeBTeujq54SQTu5Eqow2akZsk=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.js.fyopx3gvnc.map">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet-src.js.map'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"fyopx3gvnc"},{"Name":"integrity","Value":"sha256-l7cBxd/w6YZOXEWKixXC7DN4ejJsXed7kI\u002BeoTvi1Wo="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.js.map"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"866292"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022l7cBxd/w6YZOXEWKixXC7DN4ejJsXed7kI\u002BeoTvi1Wo=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet-src.js.map">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet-src.js.map'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-l7cBxd/w6YZOXEWKixXC7DN4ejJsXed7kI\u002BeoTvi1Wo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"866292"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022l7cBxd/w6YZOXEWKixXC7DN4ejJsXed7kI\u002BeoTvi1Wo=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet.7888sfn8yc.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7888sfn8yc"},{"Name":"integrity","Value":"sha256-p4NxAoJBhIIN\u002BhmNHrzRCf9tD/miZyoHS5obTRR9BMY="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14806"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022p4NxAoJBhIIN\u002BhmNHrzRCf9tD/miZyoHS5obTRR9BMY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet.b4adnknggc.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"b4adnknggc"},{"Name":"integrity","Value":"sha256-hdRVtFIkFfa63EKg59F8kZ0QA0fWuJWL0Nxzj97NbVA="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"147563"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022hdRVtFIkFfa63EKg59F8kZ0QA0fWuJWL0Nxzj97NbVA=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-p4NxAoJBhIIN\u002BhmNHrzRCf9tD/miZyoHS5obTRR9BMY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"14806"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022p4NxAoJBhIIN\u002BhmNHrzRCf9tD/miZyoHS5obTRR9BMY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hdRVtFIkFfa63EKg59F8kZ0QA0fWuJWL0Nxzj97NbVA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"147563"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022hdRVtFIkFfa63EKg59F8kZ0QA0fWuJWL0Nxzj97NbVA=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet.js.map">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet.js.map'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YAoQ3FzREN4GmVENMir8vgHHypC0xfSK3CAxTHCqx1M="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"225544"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022YAoQ3FzREN4GmVENMir8vgHHypC0xfSK3CAxTHCqx1M=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet.js.w4n1b1xhjx.map">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\leaflet.js.map'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"w4n1b1xhjx"},{"Name":"integrity","Value":"sha256-YAoQ3FzREN4GmVENMir8vgHHypC0xfSK3CAxTHCqx1M="},{"Name":"label","Value":"_content/WorldMapLeaflet/Lib/Leaflet/dist/leaflet.js.map"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"225544"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022YAoQ3FzREN4GmVENMir8vgHHypC0xfSK3CAxTHCqx1M=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Oct 2025 12:54:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>
