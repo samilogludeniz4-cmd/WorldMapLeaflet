@@ -12,17 +12,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kz8r0labqh"},{"Name":"integrity","Value":"sha256-wMVryXEtQ0OZgXIJmBGsuoyeMDdYg83SfYJSyoBTQKI="},{"Name":"label","Value":"_content/WorldMapLeaflet/data/world.geojson.json"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"21586743"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022wMVryXEtQ0OZgXIJmBGsuoyeMDdYg83SfYJSyoBTQKI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 05 Sep 2025 08:03:31 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/index.4paxoh9b2j.html">
+    <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/index.0ge1cpx1a6.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4paxoh9b2j"},{"Name":"integrity","Value":"sha256-mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg="},{"Name":"label","Value":"_content/WorldMapLeaflet/index.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10839"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 30 Oct 2025 15:44:51 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0ge1cpx1a6"},{"Name":"integrity","Value":"sha256-YN\u002Bv0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o="},{"Name":"label","Value":"_content/WorldMapLeaflet/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3168"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022YN\u002Bv0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 14:28:23 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/index.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"10839"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 30 Oct 2025 15:44:51 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YN\u002Bv0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3168"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022YN\u002Bv0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 14:28:23 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/WorldMapLeaflet/Lib/Leaflet/dist/.46x06tl61j.DS_Store">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Lib\Leaflet\dist\.DS_Store'))</AssetFile>

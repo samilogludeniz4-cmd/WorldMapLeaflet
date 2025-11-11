@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9CEyQ4kMdA87yMHbL3Safe9YWeyYk8G8zx2ynVjev4g=",
+  "Hash": "Bs8w2yp+cTurE3Zxcp79bfvo344zNZ3IGXpAQz2Hn9U=",
   "Source": "WorldMapLeaflet",
   "BasePath": "_content/WorldMapLeaflet",
   "Mode": "Default",
@@ -38,12 +38,12 @@
       "OriginalItemSpec": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/Lib/Leaflet/dist/leaflet.js.map"
     },
     {
-      "Identity": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-4paxoh9b2j.gz",
+      "Identity": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-0ge1cpx1a6.gz",
       "SourceId": "WorldMapLeaflet",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/WorldMapLeaflet",
-      "RelativePath": "index#[.{fingerprint=4paxoh9b2j}]?.html.gz",
+      "RelativePath": "index#[.{fingerprint=0ge1cpx1a6}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -52,8 +52,8 @@
       "RelatedAsset": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "zrcz4h2y2s",
-      "Integrity": "kcwGJrcGfZzAGYNFOhYBqOQ8fWoBGA/XipGU40KI/NI=",
+      "Fingerprint": "84agcig849",
+      "Integrity": "yFQWChPbeC/fo0wEw7cf1QO5aHPDkgTaM/jOdrccB+I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/index.html"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4paxoh9b2j",
-      "Integrity": "mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg=",
+      "Fingerprint": "0ge1cpx1a6",
+      "Integrity": "YN+v0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
@@ -821,13 +821,13 @@
       ]
     },
     {
-      "Route": "index.4paxoh9b2j.html",
-      "AssetFile": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-4paxoh9b2j.gz",
+      "Route": "index.0ge1cpx1a6.html",
+      "AssetFile": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-0ge1cpx1a6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000245037981"
+          "Quality": "0.000644329897"
         }
       ],
       "ResponseHeaders": [
@@ -837,15 +837,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4080"
+          "Value": "1551"
         },
         {
           "Name": "ETag",
-          "Value": "\"kcwGJrcGfZzAGYNFOhYBqOQ8fWoBGA/XipGU40KI/NI=\""
+          "Value": "\"yFQWChPbeC/fo0wEw7cf1QO5aHPDkgTaM/jOdrccB+I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 30 Oct 2025 15:44:51 GMT"
+          "Value": "Tue, 11 Nov 2025 14:28:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -865,13 +865,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg=\""
+          "Value": "W/\"YN+v0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4paxoh9b2j"
+          "Value": "0ge1cpx1a6"
         },
         {
           "Name": "label",
@@ -879,12 +879,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg="
+          "Value": "sha256-YN+v0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o="
         }
       ]
     },
     {
-      "Route": "index.4paxoh9b2j.html",
+      "Route": "index.0ge1cpx1a6.html",
       "AssetFile": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/wwwroot/index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -894,7 +894,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10839"
+          "Value": "3168"
         },
         {
           "Name": "Content-Type",
@@ -902,11 +902,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg=\""
+          "Value": "\"YN+v0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 30 Oct 2025 15:44:51 GMT"
+          "Value": "Tue, 11 Nov 2025 14:28:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -916,7 +916,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4paxoh9b2j"
+          "Value": "0ge1cpx1a6"
         },
         {
           "Name": "label",
@@ -924,13 +924,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg="
+          "Value": "sha256-YN+v0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o="
         }
       ]
     },
     {
-      "Route": "index.4paxoh9b2j.html.gz",
-      "AssetFile": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-4paxoh9b2j.gz",
+      "Route": "index.0ge1cpx1a6.html.gz",
+      "AssetFile": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-0ge1cpx1a6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -939,7 +939,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4080"
+          "Value": "1551"
         },
         {
           "Name": "Content-Type",
@@ -947,11 +947,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kcwGJrcGfZzAGYNFOhYBqOQ8fWoBGA/XipGU40KI/NI=\""
+          "Value": "\"yFQWChPbeC/fo0wEw7cf1QO5aHPDkgTaM/jOdrccB+I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 30 Oct 2025 15:44:51 GMT"
+          "Value": "Tue, 11 Nov 2025 14:28:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -969,7 +969,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4paxoh9b2j"
+          "Value": "0ge1cpx1a6"
         },
         {
           "Name": "label",
@@ -977,18 +977,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kcwGJrcGfZzAGYNFOhYBqOQ8fWoBGA/XipGU40KI/NI="
+          "Value": "sha256-yFQWChPbeC/fo0wEw7cf1QO5aHPDkgTaM/jOdrccB+I="
         }
       ]
     },
     {
       "Route": "index.html",
-      "AssetFile": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-4paxoh9b2j.gz",
+      "AssetFile": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-0ge1cpx1a6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000245037981"
+          "Quality": "0.000644329897"
         }
       ],
       "ResponseHeaders": [
@@ -998,15 +998,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4080"
+          "Value": "1551"
         },
         {
           "Name": "ETag",
-          "Value": "\"kcwGJrcGfZzAGYNFOhYBqOQ8fWoBGA/XipGU40KI/NI=\""
+          "Value": "\"yFQWChPbeC/fo0wEw7cf1QO5aHPDkgTaM/jOdrccB+I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 30 Oct 2025 15:44:51 GMT"
+          "Value": "Tue, 11 Nov 2025 14:28:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1026,13 +1026,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg=\""
+          "Value": "W/\"YN+v0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg="
+          "Value": "sha256-YN+v0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o="
         }
       ]
     },
@@ -1047,7 +1047,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10839"
+          "Value": "3168"
         },
         {
           "Name": "Content-Type",
@@ -1055,11 +1055,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg=\""
+          "Value": "\"YN+v0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 30 Oct 2025 15:44:51 GMT"
+          "Value": "Tue, 11 Nov 2025 14:28:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1069,13 +1069,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mP8pNKlQwTzSk8Sr/jXmjhgNakqMjyBRipF4s4mhMlg="
+          "Value": "sha256-YN+v0TsXggIZEpMZlgzzM989PNuKRh6gTWItSbqEG3o="
         }
       ]
     },
     {
       "Route": "index.html.gz",
-      "AssetFile": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-4paxoh9b2j.gz",
+      "AssetFile": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-0ge1cpx1a6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1084,7 +1084,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4080"
+          "Value": "1551"
         },
         {
           "Name": "Content-Type",
@@ -1092,11 +1092,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kcwGJrcGfZzAGYNFOhYBqOQ8fWoBGA/XipGU40KI/NI=\""
+          "Value": "\"yFQWChPbeC/fo0wEw7cf1QO5aHPDkgTaM/jOdrccB+I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 30 Oct 2025 15:44:51 GMT"
+          "Value": "Tue, 11 Nov 2025 14:28:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1114,7 +1114,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kcwGJrcGfZzAGYNFOhYBqOQ8fWoBGA/XipGU40KI/NI="
+          "Value": "sha256-yFQWChPbeC/fo0wEw7cf1QO5aHPDkgTaM/jOdrccB+I="
         }
       ]
     },

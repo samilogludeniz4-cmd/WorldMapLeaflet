@@ -35,4 +35,5 @@
 /Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/9yi0f9aqv4-b4adnknggc.gz
 /Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/5zqiiqcrco-w4n1b1xhjx.gz
 /Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/dk3b07kacx-kz8r0labqh.gz
-/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-4paxoh9b2j.gz
+/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/WorldMapLeaflet.sourcelink.json
+/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/Debug/net9.0/compressed/6jtt4qwk7g-0ge1cpx1a6.gz
