@@ -3,86 +3,515 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Dünya Haritası</title>
+    <title>Parcel Manager - WorldMapLeaflet</title>
     <link rel="stylesheet" href="/Lib/Leaflet/dist/leaflet.css"/>
     <style>
-        html,body{height:100%;margin:0} #map{height:100%}
-        /* Google Maps benzeri arama kutusu */
-        #searchPanel{
-            position:absolute;top:15px;left:15px;z-index:99999;
-            width:360px;background:#fff;border-radius:10px;
-            box-shadow:0 2px 10px rgba(0,0,0,.2);border:1px solid #e6e6e6;
-            display:flex;align-items:center;gap:8px;padding:8px 10px;
-        }
-        #q{
-            flex:1;border:none;outline:none;font-size:15px;
-        }
-        #go{
-            border:1px solid #ddd;background:#fff;border-radius:8px;
-            padding:6px 10px;cursor:pointer;
-        }
+        * { box-sizing: border-box; }
+        html, body { height: 100%; margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        #map { height: 100%; }
+        
+        /* Login/Register Modal */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 100000; align-items: center; justify-content: center; }
+        .modal.active { display: flex; }
+        .modal-content { background: white; padding: 30px; border-radius: 12px; width: 90%; max-width: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .modal h2 { margin: 0 0 20px 0; color: #333; }
+        .modal input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; }
+        .modal button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600; }
+        .modal button:hover { background: #0056b3; }
+        .modal .switch { text-align: center; margin-top: 15px; color: #666; }
+        .modal .switch a { color: #007bff; cursor: pointer; text-decoration: underline; }
+        .error { color: #dc3545; font-size: 13px; margin-top: -10px; margin-bottom: 10px; }
+        
+        /* Top Bar */
+        #topBar { position: absolute; top: 15px; left: 15px; right: 15px; z-index: 99999; display: flex; gap: 10px; flex-wrap: wrap; }
+        #searchPanel { flex: 1; min-width: 300px; background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.2); border: 1px solid #e6e6e6; display: flex; align-items: center; gap: 8px; padding: 8px 10px; }
+        #q { flex: 1; border: none; outline: none; font-size: 15px; }
+        #go { border: 1px solid #ddd; background: #fff; border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 14px; }
+        #go:hover { background: #f0f0f0; }
+        
+        /* User Info */
+        #userPanel { background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.2); padding: 10px 15px; display: flex; align-items: center; gap: 10px; }
+        #userInfo { font-size: 14px; color: #333; }
+        #logoutBtn { background: #dc3545; color: white; border: none; border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 13px; }
+        #logoutBtn:hover { background: #c82333; }
+        
+        /* Parcel Controls */
+        #parcelPanel { position: absolute; top: 70px; left: 15px; z-index: 99998; background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.2); padding: 15px; min-width: 280px; max-height: calc(100vh - 100px); overflow-y: auto; }
+        #parcelPanel h3 { margin: 0 0 15px 0; font-size: 18px; color: #333; }
+        .btn { padding: 10px 15px; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600; width: 100%; margin-bottom: 10px; }
+        .btn-primary { background: #28a745; color: white; }
+        .btn-primary:hover { background: #218838; }
+        .btn-danger { background: #dc3545; color: white; }
+        .btn-danger:hover { background: #c82333; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-secondary:hover { background: #5a6268; }
+        #parcelList { margin-top: 15px; }
+        .parcel-item { padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; cursor: pointer; }
+        .parcel-item:hover { background: #f8f9fa; }
+        .parcel-item.active { background: #e7f3ff; border-color: #007bff; }
+        .parcel-item h4 { margin: 0 0 5px 0; font-size: 14px; color: #333; }
+        .parcel-item p { margin: 0; font-size: 12px; color: #666; }
+        .parcel-actions { display: flex; gap: 5px; margin-top: 8px; }
+        .parcel-actions button { flex: 1; padding: 6px; font-size: 12px; }
+        
+        /* Drawing Mode Info */
+        #drawModeInfo { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 99997; background: rgba(40, 167, 69, 0.9); color: white; padding: 12px 20px; border-radius: 8px; font-size: 14px; display: none; }
+        #drawModeInfo.active { display: block; }
     </style>
 </head>
 <body>
-<div id="searchPanel">
-    <!-- datalist bağladık -->
-    <input id="q" list="suggs" placeholder="İl, ilçe, mahalle, sokak ara…" autocomplete="off"/>
-    <datalist id="suggs"></datalist>
-    <button id="go">Ara</button>
+<!-- Login/Register Modal -->
+<div id="authModal" class="modal active">
+    <div class="modal-content">
+        <h2 id="authTitle">Giriş Yap</h2>
+        <div id="authError" class="error"></div>
+        <input type="text" id="authUsername" placeholder="Kullanıcı Adı" required/>
+        <input type="email" id="authEmail" placeholder="E-posta (sadece kayıt)" style="display:none;"/>
+        <input type="password" id="authPassword" placeholder="Şifre" required/>
+        <button id="authSubmit">Giriş Yap</button>
+        <div class="switch">
+            <span id="authSwitch">Hesabın yok mu? <a id="authToggle">Kayıt Ol</a></span>
+        </div>
+    </div>
 </div>
 
+<!-- Top Bar -->
+<div id="topBar">
+    <div id="searchPanel">
+        <input id="q" list="suggs" placeholder="İl, ilçe, mahalle, sokak ara…" autocomplete="off"/>
+        <datalist id="suggs"></datalist>
+        <button id="go">Ara</button>
+    </div>
+    <div id="userPanel" style="display:none;">
+        <span id="userInfo"></span>
+        <button id="logoutBtn">Çıkış</button>
+    </div>
+</div>
+
+<!-- Parcel Panel -->
+<div id="parcelPanel" style="display:none;">
+    <h3>Parsellerim</h3>
+        <button id="newParcelBtn" class="btn btn-primary">Yeni Parsel Çiz</button>
+        <button id="cancelDrawBtn" class="btn btn-secondary" style="display:none;">İptal Et</button>
+        <button id="saveParcelBtn" class="btn btn-primary" style="display:none;margin-top:10px;">Kaydet (En az 4 iğne gerekli)</button>
+        <div id="parcelList"></div>
+</div>
+
+<!-- Drawing Mode Info -->
+<div id="drawModeInfo">Çizim Modu: Haritaya en az 4 iğne yerleştirin, sonra "Kaydet" butonuna tıklayın</div>
+
+<!-- Map -->
 <div id="map"></div>
 
 <script src="/Lib/Leaflet/dist/leaflet.js"></script>
 <script>
-    // Harita
-    const map = L.map('map',{worldCopyJump:true}).setView([39,35],6);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-        {maxZoom:18, attribution:'&copy; OpenStreetMap'}).addTo(map);
-    map.zoomControl.setPosition('topright');
+    // State
+    let token = localStorage.getItem('token');
+    let currentUser = null;
+    let map = null;
+    let markers = L.layerGroup();
+    let polygons = L.layerGroup();
+    let isDrawingMode = false;
+    let drawingMarkers = [];
+    let parcels = [];
+    let selectedParcelId = null;
 
-    // Tek marker
-    const markers=L.layerGroup().addTo(map);
-    function setMarker(lat,lon,name){
-        markers.clearLayers();
-        const p=[lat,lon];
-        L.marker(p).addTo(markers).bindPopup(name).openPopup();
-        map.flyTo(p, 15, {duration:.6});
+    // API Helper
+    async function apiCall(endpoint, options = {}) {
+        const headers = { 'Content-Type': 'application/json', ...options.headers };
+        if (token) headers['Authorization'] = `Bearer ${token}`;
+        
+        const response = await fetch(endpoint, { ...options, headers });
+        if (response.status === 401) {
+            logout();
+            return null;
+        }
+        return response;
     }
 
+    // Auth
+    function showAuth() {
+        document.getElementById('authModal').classList.add('active');
+        document.getElementById('parcelPanel').style.display = 'none';
+        document.getElementById('userPanel').style.display = 'none';
+    }
+
+    function hideAuth() {
+        document.getElementById('authModal').classList.remove('active');
+        document.getElementById('parcelPanel').style.display = 'block';
+        document.getElementById('userPanel').style.display = 'flex';
+    }
+
+    async function login(username, password) {
+        const res = await fetch('/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+        if (!res.ok) {
+            document.getElementById('authError').textContent = 'Kullanıcı adı veya şifre hatalı';
+            return false;
+        }
+        const data = await res.json();
+        token = data.token;
+        localStorage.setItem('token', token);
+        await loadUser();
+        hideAuth();
+        return true;
+    }
+
+    async function register(username, email, password) {
+        const res = await fetch('/api/auth/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, email, password })
+        });
+        if (!res.ok) {
+            const error = await res.json();
+            document.getElementById('authError').textContent = error.errors?.[0]?.description || 'Kayıt başarısız';
+            return false;
+        }
+        const data = await res.json();
+        token = data.token;
+        localStorage.setItem('token', token);
+        await loadUser();
+        hideAuth();
+        return true;
+    }
+
+    function logout() {
+        token = null;
+        localStorage.removeItem('token');
+        currentUser = null;
+        parcels = [];
+        markers.clearLayers();
+        polygons.clearLayers();
+        selectedParcelId = null;
+        cancelDrawing();
+        showAuth();
+        refreshParcelList();
+    }
+
+    async function loadUser() {
+        const res = await apiCall('/api/auth/me');
+        if (!res || !res.ok) return;
+        currentUser = await res.json();
+        document.getElementById('userInfo').textContent = currentUser.username;
+        await loadParcels();
+    }
+
+    // Map Init
+    function initMap() {
+        map = L.map('map', { worldCopyJump: true }).setView([39, 35], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '&copy; OpenStreetMap'
+        }).addTo(map);
+        map.zoomControl.setPosition('topright');
+        markers.addTo(map);
+        polygons.addTo(map);
+
+        // Map click for drawing
+        map.on('click', (e) => {
+            console.log('Map clicked, isDrawingMode:', isDrawingMode, 'latlng:', e.latlng);
+            if (isDrawingMode) {
+                addDrawingMarker(e.latlng);
+            }
+        });
+    }
+
+    // Drawing Mode
+    function startDrawing() {
+        // Önce mevcut çizimi temizle
+        drawingMarkers.forEach(m => m.remove());
+        drawingMarkers = [];
+        polygons.clearLayers();
+        
+        // Sonra çizim modunu başlat
+        isDrawingMode = true;
+        document.getElementById('drawModeInfo').classList.add('active');
+        document.getElementById('newParcelBtn').style.display = 'none';
+        document.getElementById('cancelDrawBtn').style.display = 'block';
+        document.getElementById('saveParcelBtn').style.display = 'block';
+        updateSaveButton();
+        if (map) {
+            map.dragging.disable();
+            map.doubleClickZoom.disable();
+        }
+        console.log('Drawing mode started, isDrawingMode:', isDrawingMode);
+    }
+
+    function cancelDrawing() {
+        isDrawingMode = false;
+        document.getElementById('drawModeInfo').classList.remove('active');
+        document.getElementById('newParcelBtn').style.display = 'block';
+        document.getElementById('cancelDrawBtn').style.display = 'none';
+        document.getElementById('saveParcelBtn').style.display = 'none';
+        drawingMarkers.forEach(m => m.remove());
+        drawingMarkers = [];
+        polygons.clearLayers();
+        if (map) {
+            map.dragging.enable();
+            map.doubleClickZoom.enable();
+        }
+    }
+
+    function addDrawingMarker(latlng) {
+        console.log('Adding marker at:', latlng);
+        const marker = L.marker(latlng, { draggable: true }).addTo(map);
+        drawingMarkers.push(marker);
+        console.log('Total markers:', drawingMarkers.length);
+        
+        marker.on('dragend', updateDrawingPolygon);
+        updateDrawingPolygon();
+
+        // Remove marker on right click
+        marker.on('contextmenu', (e) => {
+            e.originalEvent.preventDefault();
+            marker.remove();
+            drawingMarkers = drawingMarkers.filter(m => m !== marker);
+            updateDrawingPolygon();
+        });
+    }
+
+    function updateDrawingPolygon() {
+        if (drawingMarkers.length < 2) {
+            polygons.clearLayers();
+            updateSaveButton();
+            return;
+        }
+        const latlngs = drawingMarkers.map(m => [m.getLatLng().lat, m.getLatLng().lng]);
+        polygons.clearLayers();
+        if (drawingMarkers.length >= 4) {
+            L.polygon(latlngs, { color: '#28a745', weight: 3, fillOpacity: 0.3 }).addTo(polygons);
+        } else {
+            L.polyline(latlngs, { color: '#ffc107', weight: 2, dashArray: '5, 5' }).addTo(polygons);
+        }
+        updateSaveButton();
+    }
+    
+    function updateSaveButton() {
+        const saveBtn = document.getElementById('saveParcelBtn');
+        if (isDrawingMode && saveBtn) {
+            saveBtn.style.display = 'block';
+            if (drawingMarkers.length >= 4) {
+                saveBtn.textContent = `Kaydet (${drawingMarkers.length} iğne)`;
+                saveBtn.classList.remove('btn-secondary');
+                saveBtn.classList.add('btn-primary');
+            } else {
+                saveBtn.textContent = `Kaydet (${drawingMarkers.length}/4 iğne - En az 4 gerekli)`;
+                saveBtn.classList.remove('btn-primary');
+                saveBtn.classList.add('btn-secondary');
+            }
+        }
+    }
+
+    async function saveParcel() {
+        if (drawingMarkers.length < 4) {
+            alert('En az 4 iğne yerleştirmeniz gerekir!');
+            return;
+        }
+
+        const name = prompt('Parsel adı:');
+        if (!name) return;
+
+        const description = prompt('Parsel açıklaması (isteğe bağlı):') || null;
+
+        const coordinates = drawingMarkers.map(m => ({
+            lat: m.getLatLng().lat,
+            lon: m.getLatLng().lng
+        }));
+
+        const res = await apiCall('/api/parcels', {
+            method: 'POST',
+            body: JSON.stringify({ name, description, coordinates })
+        });
+
+        if (res && res.ok) {
+            await loadParcels();
+            cancelDrawing();
+        } else {
+            alert('Parsel kaydedilemedi!');
+        }
+    }
+
+    // Parcels
+    async function loadParcels() {
+        const res = await apiCall('/api/parcels');
+        if (!res || !res.ok) return;
+        parcels = await res.json();
+        refreshParcelList();
+        drawParcels();
+    }
+
+    function refreshParcelList() {
+        const list = document.getElementById('parcelList');
+        if (!parcels || parcels.length === 0) {
+            list.innerHTML = '<p style="color:#666;font-size:13px;text-align:center;">Henüz parsel yok</p>';
+            return;
+        }
+        list.innerHTML = parcels.map(p => `
+            <div class="parcel-item ${selectedParcelId === p.id ? 'active' : ''}" data-id="${p.id}">
+                <h4>${p.name || 'İsimsiz Parcel'}</h4>
+                <p>${p.description || 'Açıklama yok'}</p>
+                <p style="font-size:11px;color:#999;">${new Date(p.createdAt).toLocaleDateString('tr-TR')}</p>
+                <div class="parcel-actions">
+                    <button class="btn btn-secondary" onclick="selectParcel(${p.id})">Göster</button>
+                    <button class="btn btn-danger" onclick="deleteParcel(${p.id})">Sil</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function drawParcels() {
+        markers.clearLayers();
+        polygons.clearLayers();
+
+        parcels.forEach(parcel => {
+            if (!parcel.coordinates || parcel.coordinates.length < 4) return;
+            const latlngs = parcel.coordinates.map(c => [c.lat, c.lon]);
+            const polygon = L.polygon(latlngs, {
+                color: selectedParcelId === parcel.id ? '#007bff' : '#6c757d',
+                weight: 3,
+                fillOpacity: 0.3
+            }).addTo(polygons);
+
+            polygon.bindPopup(`<b>${parcel.name}</b><br/>${parcel.description || ''}`);
+        });
+    }
+
+    function selectParcel(id) {
+        selectedParcelId = id;
+        refreshParcelList();
+        drawParcels();
+        const parcel = parcels.find(p => p.id === id);
+        if (parcel && parcel.coordinates && parcel.coordinates.length > 0) {
+            const bounds = L.latLngBounds(parcel.coordinates.map(c => [c.lat, c.lon]));
+            map.fitBounds(bounds, { padding: [50, 50] });
+        }
+    }
+
+    async function deleteParcel(id) {
+        if (!confirm('Bu parseli silmek istediğinizden emin misiniz?')) return;
+        const res = await apiCall(`/api/parcels/${id}`, { method: 'DELETE' });
+        if (res && res.ok) {
+            await loadParcels();
+            selectedParcelId = null;
+        }
+    }
+
+    // Search
     const q = document.getElementById('q');
     const list = document.getElementById('suggs');
-    let timer=null, lastResults=[];
+    let timer = null, lastResults = [];
 
-    // Yazdıkça öneri getir (datalist doldur)
-    q.addEventListener('input', ()=>{
-        const val=q.value.trim();
-        if(!val){ list.innerHTML=''; return; }
+    q.addEventListener('input', () => {
+        const val = q.value.trim();
+        if (!val) { list.innerHTML = ''; return; }
         clearTimeout(timer);
-        timer=setTimeout(()=>{
-            fetch('/api/geocode?q='+encodeURIComponent(val))
-                .then(r=>r.ok?r.json():[])
-                .then(d=>{
+        timer = setTimeout(() => {
+            fetch('/api/geocode?q=' + encodeURIComponent(val))
+                .then(r => r.ok ? r.json() : [])
+                .then(d => {
                     lastResults = d || [];
-                    // datalist seçenekleri
                     list.innerHTML = lastResults.map(r =>
-                        `<option value="${r.display_name.replaceAll('"','&quot;')}">`).join('');
+                        `<option value="${r.display_name.replaceAll('"', '&quot;')}">`).join('');
                 })
-                .catch(()=>{ list.innerHTML=''; });
+                .catch(() => { list.innerHTML = ''; });
         }, 200);
     });
 
-    // Ara butonu veya Enter → ilk eşleşmeye git
-    function go(){
-        const val=q.value.trim();
-        if(!val) return;
-        // Eğer yazılan değer, listeden birinin aynısıysa onu bul
+    function go() {
+        const val = q.value.trim();
+        if (!val) return;
         const exact = lastResults.find(r => r.display_name === val) || lastResults[0];
-        if(!exact) return;
-        setMarker(parseFloat(exact.lat), parseFloat(exact.lon), exact.display_name);
+        if (!exact) return;
+        const latlng = [parseFloat(exact.lat), parseFloat(exact.lon)];
+        map.setView(latlng, 15);
+        L.marker(latlng).addTo(markers).bindPopup(exact.display_name).openPopup();
     }
+
     document.getElementById('go').addEventListener('click', go);
-    q.addEventListener('keydown', e => { if(e.key==='Enter') go(); });
+    q.addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
+
+    // Auth UI
+    let isRegisterMode = false;
+    document.getElementById('authToggle').addEventListener('click', () => {
+        isRegisterMode = !isRegisterMode;
+        document.getElementById('authTitle').textContent = isRegisterMode ? 'Kayıt Ol' : 'Giriş Yap';
+        document.getElementById('authSubmit').textContent = isRegisterMode ? 'Kayıt Ol' : 'Giriş Yap';
+        document.getElementById('authSwitch').innerHTML = isRegisterMode
+            ? 'Zaten hesabın var mı? <a id="authToggle">Giriş Yap</a>'
+            : 'Hesabın yok mu? <a id="authToggle">Kayıt Ol</a>';
+        document.getElementById('authEmail').style.display = isRegisterMode ? 'block' : 'none';
+        document.getElementById('authError').textContent = '';
+    });
+
+    document.getElementById('authSubmit').addEventListener('click', async () => {
+        const username = document.getElementById('authUsername').value;
+        const password = document.getElementById('authPassword').value;
+        const email = document.getElementById('authEmail').value;
+
+        document.getElementById('authError').textContent = '';
+
+        if (!username || !password) {
+            document.getElementById('authError').textContent = 'Kullanıcı adı ve şifre gerekli';
+            return;
+        }
+
+        if (isRegisterMode && !email) {
+            document.getElementById('authError').textContent = 'E-posta gerekli';
+            return;
+        }
+
+        const success = isRegisterMode
+            ? await register(username, email, password)
+            : await login(username, password);
+
+        if (success) {
+            document.getElementById('authUsername').value = '';
+            document.getElementById('authPassword').value = '';
+            document.getElementById('authEmail').value = '';
+        }
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', logout);
+    document.getElementById('newParcelBtn').addEventListener('click', startDrawing);
+    document.getElementById('cancelDrawBtn').addEventListener('click', cancelDrawing);
+    document.getElementById('saveParcelBtn').addEventListener('click', () => {
+        if (drawingMarkers.length >= 4) {
+            saveParcel();
+        } else {
+            alert('En az 4 iğne yerleştirmeniz gerekir!');
+        }
+    });
+
+    // Initialize
+    initMap();
+    
+    // Save parcel on double click in drawing mode (map oluşturulduktan sonra)
+    setTimeout(() => {
+        if (map) {
+            map.on('dblclick', () => {
+                console.log('Double click, isDrawingMode:', isDrawingMode, 'markers:', drawingMarkers.length);
+                if (isDrawingMode && drawingMarkers.length >= 4) {
+                    saveParcel();
+                }
+            });
+        }
+    }, 100);
+
+    if (token) {
+        loadUser().then(() => {
+            if (currentUser) hideAuth();
+        });
+    } else {
+        showAuth();
+    }
+
+    // Make functions global for onclick handlers
+    window.selectParcel = selectParcel;
+    window.deleteParcel = deleteParcel;
 </script>
 </body>
 </html>

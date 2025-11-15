@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj": {}
+    "/Users/berkozcan/Deniz/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj": {}
   },
   "projects": {
-    "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj": {
+    "/Users/berkozcan/Deniz/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj",
+        "projectUniqueName": "/Users/berkozcan/Deniz/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj",
         "projectName": "WorldMapLeaflet",
-        "projectPath": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj",
-        "packagesPath": "/Users/denizsamiloglu/.nuget/packages/",
-        "outputPath": "/Users/denizsamiloglu/RiderProjects/WorldMapLeaflet/WorldMapLeaflet/obj/",
+        "projectPath": "/Users/berkozcan/Deniz/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj",
+        "packagesPath": "/Users/berkozcan/.nuget/packages/",
+        "outputPath": "/Users/berkozcan/Deniz/WorldMapLeaflet/WorldMapLeaflet/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/denizsamiloglu/.nuget/NuGet/NuGet.Config"
+          "/Users/berkozcan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -36,13 +36,41 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.14.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -62,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/denizsamiloglu/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
