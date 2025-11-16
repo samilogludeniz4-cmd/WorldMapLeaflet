@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "QOL4A0rqzWs=",
   "success": true,
   "projectFilePath": "/Users/berkozcan/Deniz/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj",
@@ -64,5 +65,11 @@
     "/Users/berkozcan/.nuget/packages/system.text.json/9.0.0/system.text.json.9.0.0.nupkg.sha512",
     "/Users/berkozcan/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "M4MsF7afnKY=",
+  "success": true,
+  "projectFilePath": "/Users/denizsamiloglu/harita/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> Stashed changes
   "logs": []
 }

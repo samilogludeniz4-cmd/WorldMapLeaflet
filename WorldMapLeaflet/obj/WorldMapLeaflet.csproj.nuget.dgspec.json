@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "/Users/berkozcan/Deniz/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "/Users/berkozcan/Deniz/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj",
         "packagesPath": "/Users/berkozcan/.nuget/packages/",
         "outputPath": "/Users/berkozcan/Deniz/WorldMapLeaflet/WorldMapLeaflet/obj/",
+=======
+    "/Users/denizsamiloglu/harita/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj": {}
+  },
+  "projects": {
+    "/Users/denizsamiloglu/harita/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/denizsamiloglu/harita/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj",
+        "projectName": "WorldMapLeaflet",
+        "projectPath": "/Users/denizsamiloglu/harita/WorldMapLeaflet/WorldMapLeaflet/WorldMapLeaflet.csproj",
+        "packagesPath": "/Users/denizsamiloglu/.nuget/packages/",
+        "outputPath": "/Users/denizsamiloglu/harita/WorldMapLeaflet/WorldMapLeaflet/obj/",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/berkozcan/.nuget/NuGet/NuGet.Config"
@@ -38,7 +52,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
+<<<<<<< Updated upstream
         "SdkAnalysisLevel": "9.0.300"
+=======
+        "SdkAnalysisLevel": "10.0.100"
+>>>>>>> Stashed changes
       },
       "frameworks": {
         "net9.0": {
@@ -90,7 +108,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< Updated upstream
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.307/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
         }
       }
     }
